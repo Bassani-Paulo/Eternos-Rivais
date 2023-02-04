@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/SpitSound.mp3-5d57eb23d599829f68b1a35514be5658.mp3str"
+
+[deps]
+
+source_file="res://Sounds/SpitSound.mp3"
+dest_files=[ "res://.import/SpitSound.mp3-5d57eb23d599829f68b1a35514be5658.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

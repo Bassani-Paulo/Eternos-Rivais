@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Comics/Slide15.gd" type="Script" id=2]
+[ext_resource path="res://ComicImages/ComicScene15.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 1 )
+
+[node name="Slides" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.509804, 0.454902, 0.603922, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 31.0
+margin_top = 429.0
+margin_right = -28.0
+margin_bottom = -27.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 52.0
+margin_top = 440.0
+margin_right = 975.0
+margin_bottom = 567.0
+custom_colors/font_color = Color( 0, 0.309804, 0.556863, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Derrotado, o nosso caro amigo Gato acabou entrando em depressão e usando drogas pesadas."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cena1Paulo" type="Sprite" parent="."]
+position = Vector2( 514, 215 )
+scale = Vector2( 0.377778, 0.377778 )
+texture = ExtResource( 3 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Arena1Music.mp3-b0316f38ad0a3d2f65735a7ff43a354d.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Arena1Music.mp3"
+dest_files=[ "res://.import/Arena1Music.mp3-b0316f38ad0a3d2f65735a7ff43a354d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

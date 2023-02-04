@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/EspecialReadySound.mp3-4fa45c576ae13b2f01d2b90f930713e0.mp3str"
+
+[deps]
+
+source_file="res://Sounds/EspecialReadySound.mp3"
+dest_files=[ "res://.import/EspecialReadySound.mp3-4fa45c576ae13b2f01d2b90f930713e0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

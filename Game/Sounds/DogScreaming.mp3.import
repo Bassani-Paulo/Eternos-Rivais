@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/DogScreaming.mp3-8a8c872798f4e1d6b18e1fc320462942.mp3str"
+
+[deps]
+
+source_file="res://Sounds/DogScreaming.mp3"
+dest_files=[ "res://.import/DogScreaming.mp3-8a8c872798f4e1d6b18e1fc320462942.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

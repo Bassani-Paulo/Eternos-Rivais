@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Comics/Slide2.gd" type="Script" id=2]
+[ext_resource path="res://ComicImages/ComicScene2.png" type="Texture" id=3]
+[ext_resource path="res://Sounds/DogBreathing.mp3" type="AudioStream" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 1 )
+
+[node name="Slides" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.509804, 0.454902, 0.603922, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 31.0
+margin_top = 429.0
+margin_right = -28.0
+margin_bottom = -27.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 52.0
+margin_top = 440.0
+margin_right = 975.0
+margin_bottom = 567.0
+custom_colors/font_color = Color( 0.207843, 0.207843, 0.207843, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Acabou pra você Rato."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cena1Paulo" type="Sprite" parent="."]
+position = Vector2( 514, 215 )
+scale = Vector2( 0.377778, 0.377778 )
+texture = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 10.0

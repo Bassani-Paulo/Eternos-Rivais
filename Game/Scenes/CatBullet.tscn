@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/YarnBullet.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/CatBullet.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 400.0
+
+[node name="CatBullet" type="Node2D" groups=["Bullets"]]
+scale = Vector2( 0.02, 0.02 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 50, -50 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 1 )
+offset = Vector2( -380, 0 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 8.0
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

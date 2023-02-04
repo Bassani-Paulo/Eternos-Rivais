@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/RatScreaming.mp3-81525aab752f49343189d0fa8e2c2d57.mp3str"
+
+[deps]
+
+source_file="res://Sounds/RatScreaming.mp3"
+dest_files=[ "res://.import/RatScreaming.mp3-81525aab752f49343189d0fa8e2c2d57.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

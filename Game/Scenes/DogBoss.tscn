@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Sprites/Dog.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/DogBoss.gd" type="Script" id=2]
+[ext_resource path="res://Sounds/HitSound.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/DogScreaming.mp3" type="AudioStream" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 400.0
+height = 0.0
+
+[node name="DogBoss" type="Node2D"]
+scale = Vector2( 0.03, 0.03 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 266.667, 33.3333 )
+scale = Vector2( 0.891302, 0.899771 )
+texture = ExtResource( 1 )
+offset = Vector2( -360, 0 )
+
+[node name="ShootTimer" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="Gun" type="Node2D" parent="."]
+
+[node name="ChangeAttackTimer" type="Timer" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="WantToMoveTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="HitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 1.0
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="ChangeAttackTimer" to="." method="_on_ChangeAttackTimer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="timeout" from="WantToMoveTimer" to="." method="_on_WantToMoveTimer_timeout"]

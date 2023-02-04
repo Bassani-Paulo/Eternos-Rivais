@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/CatScreaming.mp3-78b27bd70079e5746f2fc1c8dfc097fb.mp3str"
+
+[deps]
+
+source_file="res://Sounds/CatScreaming.mp3"
+dest_files=[ "res://.import/CatScreaming.mp3-78b27bd70079e5746f2fc1c8dfc097fb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

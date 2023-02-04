@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/DogBreathing.mp3-175ef32e0073a170b31dd6d8e1963138.mp3str"
+
+[deps]
+
+source_file="res://Sounds/DogBreathing.mp3"
+dest_files=[ "res://.import/DogBreathing.mp3-175ef32e0073a170b31dd6d8e1963138.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

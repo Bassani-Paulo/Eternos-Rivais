@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/DogAttacking.mp3-88833f8ace70550cc47d7ae017961e27.mp3str"
+
+[deps]
+
+source_file="res://Sounds/DogAttacking.mp3"
+dest_files=[ "res://.import/DogAttacking.mp3-88833f8ace70550cc47d7ae017961e27.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

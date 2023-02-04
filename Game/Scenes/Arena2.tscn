@@ -1,0 +1,114 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/DogBoss.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/CatPlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/ArenaBackground.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/HeartSprite.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/BossHealthBarProgess.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/BossHealthBarBack.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/RocketCoin.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/RatBoss.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scripts/Arena2.gd" type="Script" id=9]
+[ext_resource path="res://Sounds/EspecialReadySound.mp3" type="AudioStream" id=10]
+[ext_resource path="res://Sounds/RocketAttack.mp3" type="AudioStream" id=11]
+
+[node name="Arena2" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+texture = ExtResource( 3 )
+
+[node name="Hearts" type="Node" parent="."]
+
+[node name="Heart0" parent="Hearts" instance=ExtResource( 4 )]
+position = Vector2( 195.5, 551 )
+scale = Vector2( 0.05, 0.05 )
+
+[node name="Heart1" parent="Hearts" instance=ExtResource( 4 )]
+position = Vector2( 160.5, 551 )
+scale = Vector2( 0.05, 0.05 )
+
+[node name="Heart2" parent="Hearts" instance=ExtResource( 4 )]
+position = Vector2( 126, 550.95 )
+scale = Vector2( 0.05, 0.05 )
+
+[node name="Heart3" parent="Hearts" instance=ExtResource( 4 )]
+position = Vector2( 91, 551 )
+scale = Vector2( 0.05, 0.05 )
+
+[node name="Heart4" parent="Hearts" instance=ExtResource( 4 )]
+position = Vector2( 57, 551 )
+scale = Vector2( 0.05, 0.05 )
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+modulate = Color( 0.929412, 0.698039, 0, 1 )
+margin_left = 79.0
+margin_top = 33.0
+margin_right = 936.0
+margin_bottom = 41.0
+max_value = 3720.0
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 5 )
+nine_patch_stretch = true
+stretch_margin_left = 2
+stretch_margin_right = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SAPercentTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="SAProgressBar" type="TextureProgress" parent="."]
+modulate = Color( 0.65625, 0.277439, 0.277439, 1 )
+margin_left = 337.0
+margin_top = 540.0
+margin_right = 821.0
+margin_bottom = 558.0
+max_value = 24.0
+value = 1.0
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 5 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dog" type="Sprite" parent="."]
+position = Vector2( 859, 550 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 7 )
+
+[node name="DogBoss" parent="." instance=ExtResource( 1 )]
+position = Vector2( 506, 293 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="CatPlayer" parent="." instance=ExtResource( 2 )]
+position = Vector2( 109, 169 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="RatBoss" parent="." instance=ExtResource( 8 )]
+position = Vector2( 506, 254 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_right = 1029.0
+margin_bottom = 604.0
+color = Color( 0.654902, 0.278431, 0.278431, 0.498039 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VFXTimer" type="Timer" parent="."]
+wait_time = 0.25
+
+[node name="EAReadyPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="EAUsePlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = 10.0
+
+[connection signal="timeout" from="SAPercentTimer" to="." method="_on_SAPercentTimer_timeout"]
+[connection signal="timeout" from="VFXTimer" to="." method="_on_VFXTimer_timeout"]
