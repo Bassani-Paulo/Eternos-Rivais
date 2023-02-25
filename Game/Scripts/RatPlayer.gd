@@ -49,7 +49,7 @@ func _on_RatPlayerHitBox_area_entered(area):
 			invincibleTimer.start()
 			get_parent().totalHearts -= 1
 			if(hp<=0):
-				get_tree().change_scene("res://Scenes/GameOverScreen.tscn")
+				get_tree().change_scene("res://Scenes/GameOverScreen1.tscn")
 
 
 func _on_Cooldown_timeout():
